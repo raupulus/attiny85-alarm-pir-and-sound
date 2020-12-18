@@ -4,8 +4,8 @@ const int PIN_BUZZER = 1;
 const int PIN_PIR = 1;
 const int PIN_SOUND = 0;
 
-const int SENSOR_THRESHOLD = 150;
-const int DELAY = 3000;
+const int SENSOR_THRESHOLD = 220;
+const int DELAY = 1000;
 
 bool detectPir = false;
 bool detectSound = false;
@@ -155,11 +155,15 @@ void loop() {
         digitalWrite(PIN_BUZZER, HIGH);
         delay(90);
         digitalWrite(PIN_BUZZER, LOW);
+        delay(30);
+        digitalWrite(PIN_BUZZER, HIGH);
+        delay(300);
+        digitalWrite(PIN_BUZZER, LOW);
 
         detectPir = false;
         detectSound = false;
         delay(DELAY);
     }
 
-    delay(50);
+    delay(10);
 }
