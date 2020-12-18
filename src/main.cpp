@@ -1,10 +1,10 @@
 #include <Arduino.h>
 
 const int PIN_BUZZER = 1;
-const int PIN_PIR = 1;
-const int PIN_SOUND = 0;
+const int PIN_PIR = 3;
+const int PIN_SOUND = 2;
 
-const int SENSOR_THRESHOLD = 220;
+const int SENSOR_THRESHOLD = 150;
 const int DELAY = 1000;
 
 bool detectPir = false;
@@ -165,5 +165,5 @@ void loop() {
         delay(DELAY);
     }
 
-    delay(10);
+    //delay(10);
 }
